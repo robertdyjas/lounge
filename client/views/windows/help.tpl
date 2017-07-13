@@ -2,6 +2,18 @@
 	<button class="lt" aria-label="Toggle channel list"></button>
 </div>
 <div class="container">
+	<h2>About The Lounge</h2>
+
+	<p class="about">
+	{{#unless public}}
+		<button class="btn" id="view-changelog">View changelog &amp; check for updates</button><br>
+	{{/unless}}
+
+		<a href="https://thelounge.github.io/" target="_blank" rel="noopener">Website</a><br>
+		<a href="https://thelounge.github.io/docs/" target="_blank" rel="noopener">Documentation</a><br>
+		<a href="https://github.com/thelounge/lounge/issues/new" target="_blank" rel="noopener">Report a bug</a>
+	</p>
+
 	<h1 class="title">Help</h1>
 
 	<h2>Keyboard Shortcuts</h2>
@@ -463,20 +475,4 @@
 			</p>
 		</div>
 	</div>
-
-	<h2>About The Lounge</h2>
-
-	<p class="about">
-		{{#if gitCommit}}
-			The Lounge is running from source
-			(<a href="https://github.com/thelounge/lounge/tree/{{ gitCommit }}" target="_blank" rel="noopener"><code>{{ gitCommit }}</code></a>).<br>
-		{{else}}
-			The Lounge is in version <strong>{{version}}</strong>
-			(<a href="https://github.com/thelounge/lounge/releases/tag/v{{ version }}" target="_blank" rel="noopener">See release notes</a>).<br>
-		{{/if}}
-
-		<a href="https://thelounge.github.io/" target="_blank" rel="noopener">Website</a><br>
-		<a href="https://thelounge.github.io/docs/" target="_blank" rel="noopener">Documentation</a><br>
-		<a href="https://github.com/thelounge/lounge/issues/new" target="_blank" rel="noopener">Report a bug</a>
-	</p>
 </div>
