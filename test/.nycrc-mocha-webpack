@@ -1,0 +1,8 @@
+{
+  "all": true,
+  "include": [
+    "client/"
+  ],
+  "reporter": ["json"],
+  "clean": false
+}

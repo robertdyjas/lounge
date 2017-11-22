@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 9 # Current stable 
+- 9 # Current stable
 - 8 # Active LTS until April 2019
 - 6 # Active LTS until April 2018
 - 4 # Maintenance LTS until 2018-04-01, will be dropped in The Lounge v3
@@ -17,6 +17,11 @@ cache:
 
 before_script:
   - NODE_ENV=$BUILD_ENV npm run build
+
+script:
+  - npm run test:mocha
+  - if [ "${TRAVIS_NODE_VERSION}" = "8" ]; then NODE_ENV=$BUILD_ENV npm run test:mocha-webpack; fi
+  - npm run lint
 
 notifications:
   email:

@@ -1,0 +1,4 @@
+--interactive false
+--recursive
+--webpack-config webpack.config-test.js
+test/client/**/*.js

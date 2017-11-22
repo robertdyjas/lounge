@@ -16,9 +16,9 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version
   - appveyor-retry npm install
-  - npm run build
   - npm install mocha-appveyor-reporter
   - echo --reporter mocha-appveyor-reporter >> test/mocha.opts
+  - echo --reporter mocha-appveyor-reporter >> test/mocha-webpack.opts
 
 test_script:
   - node --version

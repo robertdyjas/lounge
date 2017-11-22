@@ -7,6 +7,9 @@ const findLinks = require("./ircmessageparser/findLinks");
 const findEmoji = require("./ircmessageparser/findEmoji");
 const merge = require("./ircmessageparser/merge");
 
+// FIXME: This is just for testing
+const templates = require("../../../views/chat.tpl"); // eslint-disable-line
+
 // Create an HTML `span` with styling information for a given fragment
 function createFragment(fragment) {
 	const classes = [];

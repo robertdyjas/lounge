@@ -1,0 +1,12 @@
+{
+  "all": true,
+  "exclude": [
+    "client/",
+    "coverage/",
+    "public/",
+    "test/",
+    "webpack.config*.js"
+  ],
+  "reporter": ["json"],
+  "clean": false
+}
