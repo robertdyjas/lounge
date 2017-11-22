@@ -64,11 +64,7 @@ var inputs = [
 	return plugins;
 }, {});
 
-function Client(manager, name, config) {
-	if (typeof config !== "object") {
-		config = {};
-	}
-
+function Client(manager, name, config = {}) {
 	_.merge(this, {
 		awayMessage: config.awayMessage || "",
 		lastActiveChannel: -1,
